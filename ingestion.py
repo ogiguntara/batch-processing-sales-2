@@ -28,5 +28,5 @@ if __name__ == "__main__":
         time = datetime.now().strftime("%Y%m%d")
         
         df = pandas.DataFrame(data, columns=[col[0] for col in cur.description])
-        with client.write(f'/ogi/{time}/{table[0]}_{time}.csv', encoding='utf-8') as writer:
+        with client.write(f'/Project5/{time}/{table[0]}_{time}.csv', encoding='utf-8') as writer:
             df.to_csv(writer, index=False)
